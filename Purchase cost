@@ -1,0 +1,15 @@
+/*Paying at the checkout for the purchased goods, you received a receipt, which contains the prices and the name of the goods in the form:
+
+["18.7 salmon", "9.35 cheese", "2.99 milk", "9.99 chocolate bars"].
+
+How much money should you pay for all purchases?
+
+Write a function purchaseValue that takes a values ​​array containing the prices and name of each item purchased as an argument and returns the total purchase price.*/
+
+function purchaseValue(values){
+  let sum = 0;
+  for(let i = 0; i < values.length; i++){
+    sum += parseFloat(values[i]);
+  }
+  return sum;
+}

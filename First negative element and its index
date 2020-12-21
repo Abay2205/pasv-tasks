@@ -1,0 +1,20 @@
+/* Write a function firstNegative that takes the array arr as an argument and returns the first negative element in the array and its index (as an array [element, index]), or undefined if the array contains no negative elements.
+
+Examples:
+
+function firstNegative ([0, 25, -3, 7, 15, -1, 12]) should return [-3, 2];
+function firstNegative ([1, 2, 3, 3, 15]) must return undefined;
+the firstNegative ([]) function should return undefined.
+*/
+function firstNegative(arr){
+  let el = 0;
+  let ind = 0;
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] < 0){
+      el += arr[i];
+      ind += i;
+      return [el, ind];
+    }
+  }
+  return undefined;
+  }

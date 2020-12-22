@@ -1,0 +1,24 @@
+/* 
+Write a function lastEvenElement that takes a numeric array arr as an argument and returns the last even element and its index as an array [element, index], or undefined if the array does not contain even elements.
+
+Examples:
+
+lastEvenElement ([0, 8, 4, 1]) should return [4, 2];
+lastEvenElement ([1, 2, 3, 5, 5, 15]) should return [2, 1];
+lastEvenElement ([3, 5, 7]) must return undefined;
+the lastEvenElement ([]) function must return undefined.
+*/
+function lastEvenElement(arr){
+  let el = 0;
+  let ind = 0;
+  for(let a = 0; a < arr.length; a++){
+    for(let i = 0; i < arr.length; i++){
+      if(arr[i]%2===0){ 
+      el = arr[i];
+      ind = i;
+      }
+    }
+  }
+  if(ind===0 && el === 0) return undefined;
+  return [el, ind];
+}

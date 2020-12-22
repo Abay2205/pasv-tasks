@@ -1,3 +1,7 @@
+/*Write a minPositive function that takes an array arr as an argument and returns the minimum positive element in the array. 
+If arr contains no positive elements, return null.  Example:  minPositive ([3, 6, 8, -4, -3, 2, 16]) should return 2;
+minPositive ([7, 5]) should return 5; the minPositive ([- 7, -5]) function must return null; the minPositive ([]) function must return null.
+*/
 function minPositive(arr){
   let arr1 = [];
   for(let i = 0; i < arr.length; i++){

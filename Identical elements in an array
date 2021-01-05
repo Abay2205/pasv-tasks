@@ -1,0 +1,21 @@
+/* Write a function equalElementsInArray that takes an array of numbers arr as an argument and determines if the array has the same elements, 
+and if so, returns them as an array [element, element]. 
+If there are several such pairs, return the first one. If there are no identical elements in the array, 
+return the message "All elements are different". If the original array is empty, return an empty array.
+
+Example:
+
+equalElementsInArray ([2, 1, 5, 9, 4, 5, 6]) should return [5, 5].
+the equalElementsInArray ([2, 1, 5, 9, 6, 4, 1, 5, 6]) function should return [1, 1].
+the equalElementsInArray ([1, 2, 3]) function should return "All elements are different".
+Write your solution here
+*/
+
+function equalElementsInArray(arr){
+  for(let i = 0; i < arr.length; i++){
+    for(let j = i+1; j < arr.length; j++){
+      if(arr[i]===arr[j]) return [arr[i], arr[j]];
+    }
+  }
+  return "All elements are different";
+} 

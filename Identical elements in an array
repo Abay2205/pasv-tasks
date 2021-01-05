@@ -17,5 +17,6 @@ function equalElementsInArray(arr){
       if(arr[i]===arr[j]) return [arr[i], arr[j]];
     }
   }
+  if(arr.length === 0) return [];
   return "All elements are different";
 } 

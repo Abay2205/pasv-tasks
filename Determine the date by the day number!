@@ -1,0 +1,31 @@
+/* 
+
+What date corresponds to the 100th day of the year? What date corresponds to day 200? But the answer also depends on whether the year is a leap year or not!
+
+Write a function to help determine the date if you know the number of the day in the year, and whether the year is a leap year or not. The function takes the day number day and the boolean isLeap as arguments and returns the date of the year as the string "Month, day". In all tests, the day number is a number from 1 to 366.
+
+Example:
+
+getDay (15, false) should return "January, 15";
+getDay (41, false) should return "February, 10";
+getDay (59, false) should return "February, 28";
+getDay (60, false) should return "March, 1";
+getDay (60, true) should return "February, 29";
+getDay (61, false) should return "March, 2";
+getDay (61, true) function should return
+*/
+
+function getDay(day, isLeap){
+  if(day > 366 || day <= 0 || day === 366 && isLeap === false) return 'wrong day';
+  let days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  if(isLeap) days[1] = 29;
+  let s = 0;
+  let i = 0;
+  while (s < day){
+    s = s + days[i];
+    i++;
+  }
+  let d = day - (s - days[i-1]);
+  let m = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  return `${m[i-1]}, ${d}`;
+}

@@ -1,0 +1,35 @@
+/*
+
+Write a function changeMaxAndMin that takes the arr array as an argument and returns an array in which the maximum and minimum elements are swapped. If the array has several maximum or several minimum elements, swap the first of them. In all tests, the array contains at least two elements.
+
+Use loops in your solution. The use of the Math.min () and Math.max () methods is not permitted.
+
+Example:
+
+changeMaxAndMin ([3, 4, 8, 1]) should return [3, 4, 1, 8];
+changeMaxAndMin ([3, 4, 8, 4, 1, 2, 1]) should return [3, 4, 1, 4, 8, 2, 1];
+function changeMaxAndMin ([8, 8, 2, 1, 1]) should return [1, 8, 2, 8, 1];
+the changeMaxAndMin ([7, 8]) function should return [8, 7];
+the changeMaxAndMin ([2, 2]) function should return [2, 2].
+*/
+
+function changeMaxAndMin(arr){
+  let min = arr[0];
+  let max = arr[0];
+  let min_ind = 0;
+  let max_ind = 0;
+  let a = 0;
+  for(let i = 1; i < arr.length; i++){
+    if(arr[i]>max){
+      max = arr[i];
+      max_ind = i;
+    }
+    if(arr[i]<min){
+      min = arr[i];
+      min_ind = i;
+    }
+  }
+  arr[min_ind] = max;
+  arr[max_ind] = min;
+  return arr;
+}

@@ -1,0 +1,16 @@
+/*
+Write a uniqueElement function that takes a non-empty arr array and value as arguments, 
+and returns true if the element with value is unique (that is, it occurs only once in the array), and false otherwise.
+
+Example:
+
+uniqueElement ([10, 3, 4, 3, 5], 3) must return false;
+the uniqueElement ([10, 11, 12, 13], 11) function must return true;
+the uniqueElement ([10, 12, 12, 12], 10) function must return true;
+the uniqueElement ([5, 4, 4, 4, 3], 4) function must return false.
+*/
+
+function uniqueElement(arr, value){
+    if(arr.lastIndexOf(value) === arr.indexOf(value)) return true;
+    return false;
+}

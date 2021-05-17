@@ -1,0 +1,15 @@
+function countLinesWithNegativeElements(arr){
+  let a = 0;
+  for(let i = 0; i < arr.length; i++){
+    for(let j = 0; j < arr[i].length; j++){
+      if(arr[i][j] < 0){
+         a++; 
+        break;
+      }
+    }
+
+  }
+  return a;
+}
+console.log(countLinesWithNegativeElements([[1, 2], [2, -2, -3], [3, 5], [3, 4, 5, -1, 8]]));
+© 2021 GitHub, Inc.

@@ -1,0 +1,10 @@
+function frogPrincess(n){
+  let k = 0;
+  let days = 0;
+  do {
+    k += n;
+    n = n + 3;
+    days++;
+  } while(k<=1000);
+  return days;
+}

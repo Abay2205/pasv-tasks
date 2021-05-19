@@ -1,0 +1,9 @@
+function running(n){
+  let days = 1;
+  let sum = 0;
+  do {
+    n += n * 0.1;
+    days++;
+  } while(days < 10);
+  return Math.round(n);
+}

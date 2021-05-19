@@ -1,0 +1,14 @@
+function fib(n) {
+  let arr = [];
+  let a = 0;
+  let b = 1;
+  arr.push(a);
+  arr.push(b);
+  for (let i = 3; i <= n; i++) {
+    let c = a + b;
+    a = b;
+    b = c;
+    arr.push(c);
+  }
+  return arr;
+}

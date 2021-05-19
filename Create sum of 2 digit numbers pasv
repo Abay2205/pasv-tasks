@@ -1,0 +1,8 @@
+function sumOfTwoDigitsNumbers(){
+  let sum = 0;
+  let i = 10;
+  do{
+    sum += i;
+  } while(i <= 99);
+  return sum;
+}

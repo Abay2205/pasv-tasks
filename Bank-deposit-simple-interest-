@@ -1,0 +1,10 @@
+function bankPercent(p){
+  let s = 1000;
+  let years = 0;
+  let i = s;
+  do{
+    s += i * (p/100);
+    years++;
+  } while(s < 1500);
+  return years;
+}

@@ -1,0 +1,13 @@
+function fillArray(n){
+  let arr = [];
+  for(let i = 1; i <= n; i++){
+    if(i%3===0){
+      continue;
+    }
+    if(i%2!==0){
+      continue;
+    }
+    arr.push(i);
+  }
+  return arr;
+}
